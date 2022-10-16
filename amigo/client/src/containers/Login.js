@@ -15,12 +15,14 @@ function Login() {
         <div id="loginInput">
             <img src={BlackLogo} id="BlackLogo" alt="BlackLogo" />
             <p id="loginText">로그인</p>
-            <div id="id">아이디</div>
-            <input></input>
-            <div id="password">비밀번호</div>
-            <input type="password"></input>
-            <br />
-            <button id="loginButton" type="submit">로그인</button>
+            <form action="http://localhost:5000/userAuth/login" method="post">
+              <div id="id">아이디</div>
+              <input></input>
+              <div id="password">비밀번호</div>
+              <input type="password"></input>
+              <br />
+              <button id="loginButton" type="submit">로그인</button>
+            </form>
             <p id="Q">아직 회원이 아닌신가요?<button onClick={()=>{ navigate('/signup') }}>회원가입</button></p>
         </div>
     </div>
