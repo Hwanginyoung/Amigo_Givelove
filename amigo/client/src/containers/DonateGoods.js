@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState }  from "react";
 import "./DonateGoods.css";
 // import DaumPostcode from 'react-daum-postcode';
 import Donateheader from "../components/Donateheader";
 import Inventory from "./Inventory";
+import Post from '../components/Post';
 
 function DonateGoods() {
+  const [enroll_company, setEnroll_company] = useState({
+    address:'',
+  });
 
+  const [popup, setPopup] = useState(false);
+
+  const handleInput = (e) => {
+      setEnroll_company({
+          ...enroll_company,
+          [e.target.name]:e.target.value,
+      })
+  }
+
+  const handleComplete = (data) => {
+      setPopup(!popup);
+  }
   return (
     <>
         <Donateheader />
@@ -33,9 +49,11 @@ function DonateGoods() {
             <Inventory />
 
             <p class="exp" id="adrstext">주소</p>
-            <input type="text" id="address" placeholder="주소"></input>
-            <input type="button" id="find" value="찾기" onClick=""/> <br/>
-            <input type="text" id="detailaddress" placeholder="상세주소"></input>
+            <input id='address' type="text" required={true} name="address" onChange={handleInput} value={enroll_company.address}/>
+                        <button id='find' onClick={handleComplete}>찾기</button><br />
+                        {popup && <Post company={enroll_company} setcompany={setEnroll_company}></Post>}
+
+            <input type="text" id="detailaddress"></input>
             
 
           </div>

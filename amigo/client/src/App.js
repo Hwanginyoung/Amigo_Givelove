@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { Routes, Route, Router, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 
 import Header from "./containers/Header";

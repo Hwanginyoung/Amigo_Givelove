@@ -41,14 +41,7 @@
     border: 1px solid #A4A4A4;
 }
 
-.MakeArticle .main_text .give_thing {
-    display: flex;
-}
-
 .MakeArticle .main_text .juso {
-    width: 556px;
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 20px;
 }
 
@@ -87,6 +80,7 @@
     line-height: 26px;
     letter-spacing: -0.02em;
     color: #FFFFFF;
+    margin-left: 30px;
 }
 
 .MakeArticle .main_text .address2 {

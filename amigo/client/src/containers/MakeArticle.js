@@ -3,6 +3,7 @@ import './MakeArticle.css';
 import {useNavigate} from 'react-router-dom';
 import Checkbox from './Checkbox';
 import CollectionMethod from './CollectionMethod';
+import Post from '../components/Post';
 
 const MakeArticle = () => {
     const [text, setText] = useState('');
@@ -16,6 +17,35 @@ const MakeArticle = () => {
     const [word, setWord] = useState(0)
 
     let navigate=useNavigate();
+    const [enroll_company, setEnroll_company] = useState({
+        address:'',
+    });
+    
+    const [popup, setPopup] = useState(false);
+    
+    const handleInput = (e) => {
+        setEnroll_company({
+            ...enroll_company,
+            [e.target.name]:e.target.value,
+        })
+    }
+    
+    const handleComplete = (data) => {
+        setPopup(!popup);
+    }
+
+    // const [fileImage, setFileImage] = useState("");
+
+    // // 파일 저장
+    // const saveFileImage = (e) => {
+    //     setFileImage(URL.createObjectURL(e.target.files[0]));
+    // };
+
+    // // 파일 삭제
+    // const deleteFileImage = () => {
+    //     URL.revokeObjectURL(fileImage);
+    //     setFileImage("");
+    // };
     return (
         <div className="MakeArticle">
             <header>
@@ -39,8 +69,9 @@ const MakeArticle = () => {
                     </div>
                     <p className='text'>주소</p>
                     <div className='juso'>
-                        <input className='address' />
-                        <button className='find'>찾기</button>
+                        <input className='address' type="text" required={true} name="address" onChange={handleInput} value={enroll_company.address}/>
+                        <button className='find' onClick={handleComplete}>찾기</button>
+                        {popup && <Post company={enroll_company} setcompany={setEnroll_company}></Post>}
                     </div>
                     <input className='address2' />
                     <div className='cartagori'>    
@@ -66,6 +97,41 @@ const MakeArticle = () => {
                             </label>
                             <input id='image3' type='file' style={{display: "none"}} />
                         </div>
+                        {/* <div>
+                            {fileImage && (
+                            <img
+                                alt="sample"
+                                src={fileImage}
+                                style={{ margin: "auto" }}
+                            />
+                            )}
+                            <div
+                                style={{
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                }}
+                                >
+                                <input
+                                    name="imgUpload"
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={saveFileImage}
+                                />
+
+                                <button
+                                    style={{
+                                    backgroundColor: "gray",
+                                    color: "white",
+                                    width: "55px",
+                                    height: "40px",
+                                    cursor: "pointer",
+                                    }}
+                                    onClick={() => deleteFileImage()}
+                                >
+                                    삭제
+                                </button>
+                            </div>
+                        </div> */}
                         <div className='button'>
                             <button className='back' onClick={()=>{ navigate('/MoneyDetail') }}>뒤로가기</button>
                             <button className='make_donation'>기부 만들기</button>
