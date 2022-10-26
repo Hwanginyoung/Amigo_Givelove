@@ -45,7 +45,7 @@ function Gmypage() {
                         <div class="text">사업자등록번호</div>
                         <div class="info">test2</div>
                     </div> <br />
-                    <input type="button" value="수정" id="button"/>
+                    <input type="submit" value="수정" id="button"/>
                 </div>
             </div>
         </div>

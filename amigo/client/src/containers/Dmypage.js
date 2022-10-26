@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from 'axios';
 import "./Dmypage.css";
 
 import Mypageheader from "../components/Mypageheader";
 
-function Dmypage() {
+function Dmypage(props) {
+
+    const [Password, SetPassword] = useState("");
+    const [Name, SetName] = useState("");
+    const [Num, SetNum] = useState("");
+  
+    const passwordHandler = (e) => {
+      e.preventDefault();
+      SetPassword(e.target.value);
+    };
+  
+    const nameHandler = (e) => {
+      e.preventDefault();
+      SetName(e.target.value);
+    };
+
+    const numHandler = (e) => {
+        e.preventDefault();
+         SetNum(e.target.value);
+    };
+  
+    const submitHandler = (e) => {
+      e.preventDefault();
+      let body = {
+        pass : Password,
+        name : Name,
+        num : Num
+      };
+  
+      axios
+        .post("/api/mypage", body)
+        .then((res) => console.log(res));
+    };
+  
+
   return (
     <>
       <Mypageheader />
@@ -16,7 +51,7 @@ function Dmypage() {
                     <div class="text">아이디</div>
                     <div class="info">test2</div>
                 </div> <br /> <br />
-                <div>
+                <form onSubmit={submitHandler}>
                     <div id="infoPw">
                         <div class="text">비밀번호</div>
                         <div class="info">test2</div>
@@ -27,10 +62,10 @@ function Dmypage() {
                     </div> <br /><br />
                     <div id="infoNum">
                         <div class="text">전화번호</div>
-                        <div class="info">givelove@naver.com</div>
+                        <div class="info">010-1111-2222</div>
                     </div> <br />
-                    <input type="button" value="수정" id="button" />
-                </div>
+                    <input type="submit" value="수정" id="button" />
+                </form>
             </div>
         </div>
     </>
