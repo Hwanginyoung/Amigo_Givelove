@@ -97,41 +97,6 @@ const MakeArticle = () => {
                             </label>
                             <input id='image3' type='file' style={{display: "none"}} />
                         </div>
-                        {/* <div>
-                            {fileImage && (
-                            <img
-                                alt="sample"
-                                src={fileImage}
-                                style={{ margin: "auto" }}
-                            />
-                            )}
-                            <div
-                                style={{
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                                >
-                                <input
-                                    name="imgUpload"
-                                    type="file"
-                                    accept="image/*"
-                                    onChange={saveFileImage}
-                                />
-
-                                <button
-                                    style={{
-                                    backgroundColor: "gray",
-                                    color: "white",
-                                    width: "55px",
-                                    height: "40px",
-                                    cursor: "pointer",
-                                    }}
-                                    onClick={() => deleteFileImage()}
-                                >
-                                    삭제
-                                </button>
-                            </div>
-                        </div> */}
                         <div className='button'>
                             <button className='back' onClick={()=>{ navigate('/MoneyDetail') }}>뒤로가기</button>
                             <button className='make_donation'>기부 만들기</button>
