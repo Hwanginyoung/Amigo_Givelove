@@ -9,6 +9,9 @@
 .Main .header .picture1 {
     width: 1480px;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 .Main .header input {
@@ -24,6 +27,7 @@
     font-size: 18px;
     outline: none;
     font-weight: 500;
+    margin-top: -30px;
 }
 
 .Main .contents {
