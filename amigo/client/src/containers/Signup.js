@@ -15,7 +15,7 @@ function Signup() {
         <div id="signupInput">
             <img src={BlackLogo} id="BlackLogo" alt="BlackLogo" />
             <p id="signupText">개인 회원가입</p>
-            <form action="http://localhost:5000/userAuth/join" mehtod="post">
+            <form action="http://localhost:5000/userAuth/join" method="post">
               <div id="id">아이디</div>
               <input id="idInput"></input>
               <button id="ck">중복확인</button>

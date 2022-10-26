@@ -25,7 +25,6 @@ const Main = () => {
                     <form>
                         <input type="serarch" placeholder="검색어를 입력해 주세요" />
                     </form>
-                    
                 </div>
                 <div className='contents'>
                     <p className='select'>전체 / 금액 기부 / 물품 기부</p>
