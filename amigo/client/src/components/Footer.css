@@ -1,7 +1,7 @@
 .Footer {
     background: black;
     width: 1480px;
-    height: 245px;
+    height: 230px;
     margin: 0 auto;
 }
 
@@ -20,9 +20,11 @@
     width: 988px;
     margin: 0;
     margin-left: 25px;
+    margin-top: 20px;
 }
 
 .Footer .logo {
+    margin-top: 20px;
     width: 171px;
     height: 42px; 
 }
@@ -32,6 +34,7 @@
     display: flex;
     font-size: 13px;
     justify-content: space-between;
+    margin-top: -10px;
 }
 
 .Footer .imformation .title {
@@ -44,7 +47,9 @@
 }
 
 .Footer .school-logo {
-    width: 300px;
-    height: 25.79px;
+    width: 280px;
+    height: 25px;
     float: right;
+    margin-right: -50px;
+    margin-top: -20px;
 }
