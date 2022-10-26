@@ -51,9 +51,10 @@
     float: left;
 }
 
-#Groupinfo button{
+#Groupinfo #button{
     width: 130px;
     height: 30px;
+    margin-top: 20px;
     margin-left: 150px;
     font-size: 15px;
 
