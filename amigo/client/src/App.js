@@ -18,6 +18,7 @@ import MakeMoney from './containers/MakeMoney';
 import DonateMoney from './containers/DonateMoney';
 import MakeArticle from "./containers/MakeArticle";
 import DonateGoods from './containers/DonateGoods';
+import GLogin from './containers/GLogin';
 
 function App() {
   const callApi = async () => {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/Donatemoney" element={<DonateMoney />} />
           <Route path="Makearticle" element={<MakeArticle />} />
           <Route path="DonateGoods" element={<DonateGoods />} />
+          <Route path="GLogin" element={<GLogin />} />
         </Routes>
 
       <Footer />
