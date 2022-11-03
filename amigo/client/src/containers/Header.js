@@ -6,8 +6,9 @@ import {useNavigate} from 'react-router-dom';
 function Header() {
 
   let navigate=useNavigate();
-  //https://url.kr/d6bhjl
+
   
+
   return (
     <div id='Header'>
       <div id='nav-container'>

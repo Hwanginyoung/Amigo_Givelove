@@ -1,16 +1,28 @@
 import './MoneyDetail.css';
-import money1 from '../image/money1.png';
+import Slide from '../components/Slide.js';
 import {useNavigate} from 'react-router-dom';
 
 const MoneyDetail = () => {
     
     let navigate=useNavigate();
 
+    const settings = {
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+      };
+
     return (
         <div className='MoneyDetail'>
             <header>
                 <div className='header'>
-                    <img src={money1} className='money' alt='money' />
+                    <Slide />
                 </div>
                 <div className='imformation'>
                     <p className='select'>금액 기부</p>
