@@ -33,7 +33,7 @@
     margin-bottom: 0px;
 }
 
-#Groupinfo .text{
+#gmypage #Groupinfo .text{
     width: 200px;
     font-weight: 400;
     font-size: 18px;
@@ -44,14 +44,14 @@
     float: left;
 }
 
-#Groupinfo .info{
+#gmypage #Groupinfo .info{
     width: 300px;
     font-size: 20px;
     font-weight: 600;
     float: left;
 }
 
-#Groupinfo #button{
+#gmypage #Groupinfo #button{
     width: 130px;
     height: 30px;
     margin-top: 20px;
@@ -62,4 +62,10 @@
     background-color:transparent;
     
     color: #A4A4A4;
+}
+
+#gmypage #Groupinfo #button:active{
+    background-color: #1D2088;
+    border: white;
+    color: white;
 }

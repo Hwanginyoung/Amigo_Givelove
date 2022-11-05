@@ -11,6 +11,7 @@ import Signup from "./containers/Signup";
 import Gsignup from "./containers/Gsignup";
 import Home from "./components/Home";
 import Dmypage from "./containers/Dmypage";
+import DmypageChg from "./containers/DmypageChg";
 import Gmypage from "./containers/Gmypage";
 import GmypageChg from "./containers/GmypageChg";
 import MoneyDetail from "./containers/MoneyDetail";
@@ -44,6 +45,7 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="Gsignup" element={<Gsignup />} />
           <Route path="/Dmypage" element={<Dmypage />} />
+          <Route path="/DmypageChg" element={<DmypageChg />} />
           <Route path="/Gmypage" element={<Gmypage />} />
           <Route path="/GmypageChg" element={<GmypageChg />} />
           <Route path="/Moneydetail" element={<MoneyDetail />} />

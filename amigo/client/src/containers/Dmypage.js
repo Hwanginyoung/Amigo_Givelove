@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import "./Dmypage.css";
+import {useNavigate} from 'react-router-dom';
 
 import Mypageheader from "../components/Mypageheader";
 
 function Dmypage(props) {
+    
+    let navigate=useNavigate();
 
     const [Password, SetPassword] = useState("");
     const [Name, SetName] = useState("");
@@ -64,7 +67,7 @@ function Dmypage(props) {
                         <div class="text">전화번호</div>
                         <div class="info">010-1111-2222</div>
                     </div> <br />
-                    <input type="submit" value="수정" id="button" />
+                    <input type="submit" value="수정" id="button" onClick={()=>{ navigate('/DmypageChg') }}/>
                 </form>
             </div>
         </div>
