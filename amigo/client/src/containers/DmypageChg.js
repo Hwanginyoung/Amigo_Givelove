@@ -23,11 +23,11 @@ function DmypageChg() {
                 <div>
                     <div id="infopw">
                         <div class="text">기존 비밀번호</div>
-                        <input type="password"/>
+                        <input type="password"/> <input type="submit" value="확인" id="pwck"/>
                     </div> <br />
                     <div id="infopw">
                         <div class="text">변경할 비밀번호</div>
-                        <input type="password"/> <input type="submit" value="확인" id="pwck"/>
+                        <input type="password"/>
                     </div> <br />
                     <div id="infoName">
                         <div class="text">이름</div>
