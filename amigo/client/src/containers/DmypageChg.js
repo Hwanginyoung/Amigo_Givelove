@@ -20,7 +20,7 @@ function DmypageChg() {
                     <div class="text">아이디</div>
                     <div class="info">test2</div>
                 </div> <br /> <br />
-                <div>
+                <form action="" method="post">
                     <div id="infopw">
                         <div class="text">기존 비밀번호</div>
                         <input type="password"/> <input type="submit" value="확인" id="pwck"/>
@@ -38,7 +38,7 @@ function DmypageChg() {
                         <input />
                     </div> <br />
                     <input type="submit" value="완료" id="button" onClick={()=>{ navigate('/Dmypage') }}/>
-                </div>
+                </form>
             </div>
         </div>
     </>
